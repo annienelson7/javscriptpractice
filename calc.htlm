@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Four Function Calculator</title>
+
+<script>
+function add() {
+  var a = Number(document.getElementById("FN").value);
+  var b = Number(document.getElementById("SN").value);
+  document.getElementById("ANS").innerHTML = a + b;
+}
+
+function subtract() {
+  var a = Number(document.getElementById("FN").value);
+  var b = Number(document.getElementById("SN").value);
+  document.getElementById("ANS").innerHTML = a - b;
+}
+
+function multiply() {
+  var a = Number(document.getElementById("FN").value);
+  var b = Number(document.getElementById("SN").value);
+  document.getElementById("ANS").innerHTML = a * b;
+}
+
+function divide() {
+  var a = Number(document.getElementById("FN").value);
+  var b = Number(document.getElementById("SN").value);
+  document.getElementById("ANS").innerHTML = a / b;
+}
+
+function power() {
+  var a = Number(document.getElementById("FN").value);
+  var b = Number(document.getElementById("SN").value);
+  document.getElementById("ANS").innerHTML = Math.pow(a, b);
+}
+</script>
+
+</head>
+<body>
+
+<h3>Four Function Calculator</h3>
+
+<p>
+  First number: <input type="text" id="FN">
+</p>
+
+<p>
+  Second number: <input type="text" id="SN">
+</p>
+
+<p>
+  <button onclick="add()">+</button>
+  <button onclick="subtract()">&minus;</button>
+  <button onclick="multiply()">&times;</button>
+  <button onclick="divide()">&divide;</button>
+  <button onclick="power()">x^y</button>
+</p>
+
+<p>
+  Your answer is: <span id="ANS"></span>
+</p>
+
+</body>
+</html>
