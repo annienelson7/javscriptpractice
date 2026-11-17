@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>One Function Calculator</title>
+
+<script>
+function add() {
+  // pull the two inputs off the document
+  var a = document.getElementById("FN").value;
+  var b = document.getElementById("SN").value;
+
+  // convert the text to numbers so we don't get "36" instead of 9
+  var c = Number(a) + Number(b);
+
+  // put the answer into the span
+  document.getElementById("ANS").innerHTML = c;
+}
+</script>
+
+</head>
+<body>
+
+<p>
+  First number: <input type="text" id="FN">
+</p>
+
+<p>
+  Second number: <input type="text" id="SN">
+</p>
+
+<p>
+  <button onclick="add()">+</button>
+</p>
+
+<p>
+  Your answer is: <span id="ANS"></span>
+</p>
+
+</body>
+</html>
